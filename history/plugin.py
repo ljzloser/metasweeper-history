@@ -9,7 +9,7 @@ from .computed_column import ComputedColumn, validate_column_name
 from .replay_store import (
     ensure_tables, write_record, migrate_from_replay_data, BLOCK_SIZE,
 )
-from plugins.services.history import HistoryService, GameRecord
+from .service import HistoryService, GameRecord
 from shared_types.events import GameFinishedEvent, LanguageChangeEvent
 from plugin_sdk import (
     BasePlugin, PluginInfo, make_plugin_icon, WindowMode,
@@ -413,7 +413,7 @@ class HistoryPlugin(BasePlugin[HistoryConfig]):
             display_name=_translate("HistoryPlugin", "历史记录"),
             description=_translate("HistoryPlugin", "游戏历史记录（SQLite 持久化）"),
             author="ljzloser",
-            version="1.0.0",
+            version="1.0.1",
             icon=make_plugin_icon("#7b1fa2", "\N{SCROLL}"),
             window_mode=WindowMode.TAB,  # type: ignore
             other_info=HistoryConfig,

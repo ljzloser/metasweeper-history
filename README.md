@@ -7,9 +7,11 @@
 1. 在插件管理器中打开「插件」→「插件市场」。
 2. 搜索 `metasweeper-history`，选择版本并安装，然后重启插件管理器。
 
-也可以选择「从仓库 URL 安装」，输入 <https://github.com/ljzloser/metasweeper-history>。此仓库使用 GitHub 主题 `metasweeper-plugin` 和版本标签 `metasweeper-v1.0.0`。插件运行依赖由宿主提供。
+也可以选择「从仓库 URL 安装」，输入 <https://github.com/ljzloser/metasweeper-history>。此仓库使用 GitHub 主题 `metasweeper-plugin` 和 `metasweeper-v` 版本标签。插件运行依赖由宿主提供。
 
-数据和配置继续使用元扫雷现有数据目录。训练统计插件通过宿主提供的 `HistoryService` 读取记录。
+请选用 `1.0.1` 或更新版本。已通过插件市场安装 `1.0.0` 的用户可在市场中点「更新」并重启插件管理器，已有数据库和配置继续从原数据目录读取。
+
+历史记录插件自带 `HistoryService` 和 `GameRecord`。训练统计等消费者可在插件初始化阶段从 `plugins.services.history` 延迟导入接口。
 
 数据库字段约定见[历史记录存储说明](docs/history-board-storage.md)。
 

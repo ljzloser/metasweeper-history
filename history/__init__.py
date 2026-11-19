@@ -7,6 +7,12 @@
 - 使用 self.data_dir 存储数据库文件（每个插件独立目录）
 """
 
+import sys
+
+from . import service
 from .plugin import HistoryPlugin
+
+# 已发布的服务消费者通过这个路径延迟导入协议。
+sys.modules["plugins.services.history"] = service
 
 __all__ = ["HistoryPlugin"]
