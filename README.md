@@ -15,7 +15,7 @@
 
 数据库字段约定见[历史记录存储说明](docs/history-board-storage.md)。
 
-[插件使用说明](history/README.md)
+启用插件后，在「历史记录」标签页点击「查询」，即可查看本地记录。右键点击记录可播放或导出录像。详见[插件使用说明](history/README.md)。
 
 ## 开发与测试
 
