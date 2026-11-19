@@ -413,7 +413,7 @@ class HistoryPlugin(BasePlugin[HistoryConfig]):
             display_name=_translate("HistoryPlugin", "历史记录"),
             description=_translate("HistoryPlugin", "游戏历史记录（SQLite 持久化）"),
             author="ljzloser",
-            version="1.0.2",
+            version="1.0.3",
             icon=make_plugin_icon("#7b1fa2", "\N{SCROLL}"),
             window_mode=WindowMode.TAB,  # type: ignore
             other_info=HistoryConfig,
